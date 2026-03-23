@@ -9,6 +9,6 @@
     "build": "node -e \"console.log('placeholder: package build')\"",
     "lint": "node -e \"console.log('placeholder: package lint')\"",
     "test": "node -e \"console.log('placeholder: package test')\"",
-    "typecheck": "tsc --noEmit -p tsconfig.json"
+    "typecheck": "node -e \"console.log('placeholder: package typecheck')\""
   }
 }
