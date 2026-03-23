@@ -1,0 +1,12 @@
+{
+  "name": "@real-estate/web",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "dev": "node -e \"console.log('placeholder: step-1 web workspace shell')\"",
+    "build": "node -e \"console.log('placeholder: step-1 build')\"",
+    "lint": "node -e \"console.log('placeholder: step-1 lint')\"",
+    "test": "node -e \"console.log('placeholder: step-1 test')\"",
+    "typecheck": "node -e \"console.log('placeholder: step-1 typecheck')\""
+  }
+}
