@@ -3,10 +3,22 @@
   "private": true,
   "version": "0.1.0",
   "scripts": {
-    "dev": "node -e \"console.log('placeholder: step-1 web workspace shell')\"",
-    "build": "node -e \"console.log('placeholder: step-1 build')\"",
-    "lint": "node -e \"console.log('placeholder: step-1 lint')\"",
-    "test": "node -e \"console.log('placeholder: step-1 test')\"",
-    "typecheck": "node -e \"console.log('placeholder: step-1 typecheck')\""
+    "dev": "next dev -p 5000 -H 0.0.0.0",
+    "build": "next build",
+    "start": "next start -p 5000 -H 0.0.0.0",
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "next": "^15.0.0",
+    "next-intl": "^3.26.3",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "typescript": "^5.0.0"
   }
 }

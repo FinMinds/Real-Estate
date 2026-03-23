@@ -5,7 +5,9 @@
       {
         "name": "next"
       }
-    ]
+    ],
+    "noEmit": true,
+    "incremental": true
   },
   "include": [
     "next-env.d.ts",
@@ -13,5 +15,7 @@
     "src/**/*.tsx",
     ".next/types/**/*.ts"
   ],
-  "exclude": ["node_modules"]
+  "exclude": [
+    "node_modules"
+  ]
 }
