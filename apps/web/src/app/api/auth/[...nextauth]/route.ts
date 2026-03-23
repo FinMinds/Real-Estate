@@ -1,7 +1,7 @@
-import NextAuth from 'next-auth';
-
-const handler = NextAuth({
-  providers: []
-});
-
-export const { GET, POST } = handler.handlers;
+export async function GET(): Promise<Response> {
+  return Response.json({
+    status: 'ok',
+    service: 'auth',
+    placeholder: true
+  });
+}

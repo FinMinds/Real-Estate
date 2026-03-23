@@ -1,15 +1,15 @@
-import { hasLocale } from 'next-intl';
-import { getRequestConfig } from 'next-intl/server';
-import { notFound } from 'next/navigation';
+import {getRequestConfig} from 'next-intl/server';
 
 const locales = ['nl', 'fr', 'en'] as const;
+type AppLocale = (typeof locales)[number];
 
-export default getRequestConfig(async ({ requestLocale }) => {
-  const locale = await requestLocale;
+function isAppLocale(value: string): value is AppLocale {
+  return locales.includes(value as AppLocale);
+}
 
-  if (!locale || !hasLocale(locales, locale)) {
-    notFound();
-  }
+export default getRequestConfig(async ({requestLocale}) => {
+  const requested = await requestLocale;
+  const locale: AppLocale = requested && isAppLocale(requested) ? requested : 'en';
 
   return {
     locale,

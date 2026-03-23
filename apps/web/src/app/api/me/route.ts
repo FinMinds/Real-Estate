@@ -1,7 +1,7 @@
-import { NextResponse } from 'next/server';
-
-export async function GET() {
-  return NextResponse.json({
-    status: 'placeholder'
+export async function GET(): Promise<Response> {
+  return Response.json({
+    status: 'ok',
+    service: 'me',
+    placeholder: true
   });
 }
