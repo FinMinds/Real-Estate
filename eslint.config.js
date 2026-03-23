@@ -4,7 +4,7 @@ const tseslint = require('typescript-eslint');
 
 module.exports = tseslint.config(
   {
-    ignores: ['**/.next/**', '**/dist/**', '**/coverage/**', '**/node_modules/**']
+    ignores: ['**/.next/**', '**/dist/**', '**/coverage/**', '**/node_modules/**', '**/next-env.d.ts']
   },
   js.configs.recommended,
   ...tseslint.configs.recommended,
