@@ -1,0 +1,35 @@
+lockfileVersion: '9.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+importers:
+
+  .: {}
+
+  apps/web: {}
+
+  packages/db: {}
+
+  packages/domain/analysis: {}
+
+  packages/domain/audit: {}
+
+  packages/domain/cashflow-engine: {}
+
+  packages/domain/entitlements: {}
+
+  packages/domain/kpi-engine: {}
+
+  packages/domain/loan-engine: {}
+
+  packages/domain/reference-sources: {}
+
+  packages/domain/rule-registry: {}
+
+  packages/domain/tax-engine: {}
+
+  packages/shared: {}
+
+  packages/ui: {}
