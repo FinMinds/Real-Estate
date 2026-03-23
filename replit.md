@@ -28,7 +28,7 @@ A web-first SaaS platform focused on Belgian real estate investment analysis.
 
 ## Running the App
 
-- **Dev:** `pnpm dev` (runs Next.js on port 3000)
+- **Dev:** `pnpm dev` (runs Next.js on port 5000)
 - **Build:** `pnpm build`
 - **Lint:** `pnpm lint`
 - **Test:** `pnpm test`
@@ -36,7 +36,7 @@ A web-first SaaS platform focused on Belgian real estate investment analysis.
 
 ## Development Notes
 
-- Frontend runs on port 3000 at 0.0.0.0
+- Frontend runs on port 5000 at 0.0.0.0 (required for Replit preview pane)
 - `allowedDevOrigins: ['*']` set in next.config.ts to support Replit's proxy
 - pnpm version updated to 10.26.1 to match the Replit environment
 - Empty favicon.ico was removed (was causing build errors)
