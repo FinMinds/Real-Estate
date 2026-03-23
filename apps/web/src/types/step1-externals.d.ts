@@ -3,24 +3,14 @@ declare module '*.css' {
   export default content;
 }
 
-declare namespace JSX {
-  interface Element {}
+declare module 'react' {
+  export type ReactNode = unknown;
+}
 
+declare namespace JSX {
   interface IntrinsicElements {
     [elementName: string]: unknown;
   }
-}
-
-declare module 'react' {
-  export type ReactNode =
-    | JSX.Element
-    | string
-    | number
-    | bigint
-    | boolean
-    | null
-    | undefined
-    | Iterable<ReactNode>;
 }
 
 declare module 'next/navigation' {
@@ -28,16 +18,13 @@ declare module 'next/navigation' {
 }
 
 declare module 'next/server' {
-  export class NextResponse extends Response {
+  export class NextResponse {
     static json(value: unknown): NextResponse;
   }
 }
 
 declare module 'next-auth' {
-  type RouteHandler = (
-    request: Request,
-    context?: { params?: Promise<Record<string, string | string[] | undefined>> },
-  ) => Response | Promise<Response>;
+  type RouteHandler = (request: unknown) => unknown;
 
   export default function NextAuth(config: {
     providers: unknown[];
@@ -65,5 +52,5 @@ declare module 'next-intl/middleware' {
   export default function createMiddleware(config: {
     locales: readonly string[];
     defaultLocale: string;
-  }): (request: Request) => Response | undefined;
+  }): (request: unknown) => unknown;
 }
